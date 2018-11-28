@@ -5,20 +5,22 @@
     <meta name="description" content="Textures">
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <!-- If you remix this you owe me a soda irl -->
     <!-- https://github.com/feiss/aframe-environment-component/ is how I did the environment part -->
     <!-- weathered axe in stump assets -->
+    <!-- I borrowed the stump from Poly! https://poly.google.com/view/esFOngb0uwl -->
   </head>
   <body>
     <a-assets>
       <a-asset-item id="tree_obj" src="https://cdn.glitch.com/88bcbbdb-4761-4aef-97bd-a0d47a6cac3f%2Fthumbnails%2Ftree-05.obj?1541236916908"></a-asset-item>
       <a-asset-item id="tree_mtl" src="https://cdn.glitch.com/88bcbbdb-4761-4aef-97bd-a0d47a6cac3f%2Ftree-05.mtl?1541236914844"></a-asset-item>
-      <a-asset-item id="stump" src="https://cdn.glitch.com/88bcbbdb-4761-4aef-97bd-a0d47a6cac3f%2FtreeStump.gltf?1543364731661"></a-asset-item>
+      <a-asset-item id="stump" src="treeStump.gltf"></a-asset-item>
     </a-assets>
     <a-scene>
         <a-entity environment="preset: forest; ground: none; dressingAmount: 500; dressingScale: 10; dressingUniformScale: false; dressingColor: #6631D0; skyType: color; skyColor: #440077"></a-entity>
       <a-sky src="https://66.media.tumblr.com/5ff3e945a40fd3c4862175900bad7fbf/tumblr_pbf7q2G0E91wcookgo6_1280.jpg"></a-sky>
        
-      <a-gltf-model rotation = "0 90 0" scale="0.01 0.01 0.01" position="1 2.5 -2" src="#stump" ></a-gltf-model>
+      <a-gltf-model rotation = "0 90 0" scale="0.3 0.1 0.3" position=".774 0 -8" src="#stump" ></a-gltf-model>
       
       <a-obj-model rotation = "0 90 0" scale="0.01 0.01 0.01" position="15 2.5 -2" src="#tree_obj" mtl="#tree_mtl"></a-obj-model>
       <a-entity rotation = "0 90 0" scale="0.01 0.01 0.01" position="15 2.5 -2" obj-model="obj: #tree_obj" material="color: white"></a-entity>
